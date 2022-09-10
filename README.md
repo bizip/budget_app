@@ -18,7 +18,7 @@ You need to have a basic knowledge about ruby on rails
 
 ### Setup
 
-#### clone this project (using git clone https://github.com/bizip/my-blog.git) to your local computer and use telminal to navigate into the parent directory of this project.
+#### clone this project (using git clone https://github.com/bizip/budget_app.git) to your local computer and use telminal to navigate into the parent directory of this project.
 
 ## OR
 choose this repository as your templete
