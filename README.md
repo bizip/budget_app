@@ -50,6 +50,7 @@ Give a ⭐️ if you like this project!
 
 - Hat tip to anyone whose code was used
 - Inspiration
+- [Gregoire Vella on Behance](https://www.behance.net/sakwadesignstudio) the [author of the original design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=), as required by the [Creative Commons License](https://creativecommons.org/licenses/).
 - etc
 
 ## 📝 License
