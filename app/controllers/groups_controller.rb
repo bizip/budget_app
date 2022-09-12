@@ -3,7 +3,7 @@
 class GroupsController < ApplicationController # rubocop:todo Style/Documentation
   def index
     @group = Group.all
-   end
+  end
 
   def new
     @group = Group.new
@@ -13,8 +13,8 @@ class GroupsController < ApplicationController # rubocop:todo Style/Documentatio
     @group = Group.new(category_params)
     @group.author = current_user
     if @group.save
-    redirect_to groups_path, notice: "#{@group.name} successfully created." if @group.save
-    flash[:notice] = 'Inventory created successfully!'
+      redirect_to groups_path, notice: "#{@group.name} successfully created." if @group.save
+      flash[:notice] = 'Inventory created successfully!'
     else
       flash.now[:alert] = 'Something unexpected happened, inventory could not be created.'
       render :new
