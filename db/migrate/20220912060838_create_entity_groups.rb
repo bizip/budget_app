@@ -1,8 +1,7 @@
-class CreateEntityGroups < ActiveRecord::Migration[7.0]
-  def change
-    create_table :entity_groups do |t|
+# frozen_string_literal: true
 
-      t.timestamps
-    end
+class CreateEntityGroups < ActiveRecord::Migration[7.0] # rubocop:todo Style/Documentation
+  def change
+    create_table :entity_groups, &:timestamps
   end
 end
