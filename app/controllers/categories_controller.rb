@@ -1,5 +1,6 @@
+# frozen_string_literal: true
 
-class CategoriesController < ApplicationController
+class CategoriesController < ApplicationController # rubocop:todo Style/Documentation
   def index; end
 
   def new
@@ -8,12 +9,11 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Group.new(category_params)
-    if @category.save
-      redirect_to categories_path, notice: "#{@category.name} successfully created."
-    end
+    redirect_to categories_path, notice: "#{@category.name} successfully created." if @category.save
   end
 
   private
+
   def category_params
     params.require(:group).permit(:name, :icon)
   end
