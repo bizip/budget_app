@@ -1,0 +1,21 @@
+$color-primary: #5fb523;
+
+.scan {
+    background-color: $color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+}
+
+.scan_btn {
+    border: 3px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    font-size: 2.5rem;
+    font-weight: lighter;
+}
