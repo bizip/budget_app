@@ -1,0 +1,55 @@
+// COLOR VARIABLES
+$color-primary: #5fb523;
+$color-primary-dark: #3778c2;
+$color-secondary: #434b54;
+
+// FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+
+// FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+
+.header {
+    background-color: $color-primary-dark;
+    color: #fff;
+}
+
+.header .nav_container {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem .5rem 2.5rem .5rem;
+}
+
+.status {
+    padding: .5rem .5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.status__text:not(:last-child) {
+    margin-left: 3rem;
+}
+
+.leaved {
+    color: #ced3da;
+}
+
+.status__text {
+    padding-bottom: 1rem;
+    font-weight: normal;
+}
+
+
+.status__text span {
+    display: flex;
+    justify-content: center;
+}
