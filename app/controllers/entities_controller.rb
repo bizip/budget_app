@@ -4,7 +4,7 @@ class EntitiesController < ApplicationController
   before_action :authenticate_user!
   def index
     @group_by_user = current_user.groups.find(params[:group_id])
-    @entities = @group_by_user
+    @entities = @group_by_user.entities
   end
 
   def new

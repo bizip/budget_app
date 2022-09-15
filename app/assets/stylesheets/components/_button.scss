@@ -24,9 +24,11 @@ $color-secondary: #434b54;
 
 .popup {
     width: 100%;
-    height: 100%;
+    max-width: 55rem;
+    height: 100vh;
     background-color: $color-primary-dark;
     position: absolute;
+    overflow-y: hidden;
 }
 
 .popup_link {

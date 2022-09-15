@@ -53,3 +53,13 @@ $font-display: 'Josefin Sans', sans-serif;
     display: flex;
     justify-content: center;
 }
+
+.login_links {
+    font-size: 2rem !important;
+    padding: .3rem;
+}
+
+.login_links a {
+    text-decoration: none;
+    color: #3778c2;
+}

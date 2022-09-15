@@ -6,9 +6,10 @@ class GroupsController < ApplicationController # rubocop:todo Style/Documentatio
     if user_signed_in?
       @group = current_user.groups
     else
-      render 'users/splash'
+      render 'users/slash'
     end
   end
+
   def show
     @group = Group.find(params[:id])
   end
@@ -24,7 +25,7 @@ class GroupsController < ApplicationController # rubocop:todo Style/Documentatio
       flash[:notice] = 'Category created successfully'
       redirect_to groups_path
     else
-      flash.now[:alert] = "Failed try again"
+      flash.now[:alert] = 'Failed try again'
       render action: 'new'
     end
   end

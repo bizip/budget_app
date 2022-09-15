@@ -16,3 +16,25 @@ andouille t-bone picanha. Flank ham hock
 prosciutto ground round ball tip picanha.
 </p>
 <div>
+
+<% if @entities.count > 0 %>
+  <% @entities.each do |entity| %>
+ <div class="sub_nav2">
+        <div>
+            <p class="fw-semibold"><%= entity.name %></p>
+            <p class="fw-light"><%= l entity.created_at, format: :long %></p>
+        </div>
+          <p class="Group_price">
+            $<%= entity.amount %>
+        </p>
+</div>
+  <% end %>
+<% else %>
+  <p>You have no Transactions and new to continue</p>
+<% end %>
+
+ <div class="sub_nav">
+        <p>Total payment</p>
+        <p><b><%=  @entities.map(&:amount).sum %></b></p>
+</div>
+<%= link_to 'Add Transaction', new_group_entity_path, class: "btn btn-primary fixed-bottom" %>
