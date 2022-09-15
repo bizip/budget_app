@@ -24,11 +24,13 @@
 .Group__image {
     height: 100%;
     width: 100%;
+    max-width: 8rem;
 }
 
 .Group__image img {
     height: 100%;
     width: 100%;
+    object-fit: contain;
 }
 
 .Group__text {
@@ -36,6 +38,16 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 2rem .5rem .5rem .5rem;
+}
+
+.Group__text>* {
+    max-width: 35rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .Group__price {
@@ -47,4 +59,8 @@
 
 .group__text {
     font-size: 1.7rem;
+}
+
+.white {
+    color: #fff;
 }

@@ -1,8 +1,11 @@
 <header class = "header">   
     <nav class = "nav_container">
-            <div nav__icon>
-                <i class="fa-solid fa-arrow-left"></i>
-            </div>
+            <%= link_to groups_path do %>
+                <div nav__icon>
+                    <i class="fa-solid fa-arrow-left white"></i>
+                </div>
+            <% end %>
+        
             <div class="nav__text">
                 <p>Transactions</p>
             </div>

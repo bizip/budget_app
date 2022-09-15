@@ -1,7 +1,7 @@
  <%= render partial: "shared/entity_nav" %>
  <div class="group_container">
             <div class="Group__image">
-            <img src= <%= @group_by_user %>  alt="Logo" />
+            <img src= <%= @group_by_user.icon %>  alt="Logo" />
             </div>
             <div class="Group__text">
              <%= link_to @group_by_user.name, class: "nav-link" %>
@@ -13,7 +13,6 @@
 <div class="group__text">
 <p>short loin jerky chuck pork belly pork. Turducken kielbasa chicken 
 andouille t-bone picanha. Flank ham hock 
-tenderloin sausage. Ribeye t-bone tri-tip, tenderloin pig cow 
 prosciutto ground round ball tip picanha.
 </p>
 <div>
