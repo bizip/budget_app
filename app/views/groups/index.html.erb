@@ -1,3 +1,4 @@
+ <%= render partial: "shared/navbar" %>
 <main>
     <div class="sub_nav">
         <p>Gifted</p>
@@ -7,18 +8,21 @@
     <div class="main__section">
 
     <% @group.each do |grp| %>
-    <div class="group_container">
-        <div class="Group__image">
-        <img src=<%= grp.icon %> alt="Logo" />
+
+   
+        <div class="group_container">
+            <div class="Group__image">
+            <img src=<%= grp.icon %> alt="Logo" />
+            </div>
+            <div class="Group__text">
+             <%= link_to grp.name,  group_entities_path(grp.id), class: "nav-link" %>
+                <p>1 st Jan 2020</p>
+            </div>
+            <div class="Group__price">
+            <p><b>$45.oo</b></p>
+            </div>
         </div>
-        <div class="Group__text">
-            <p><%= grp.name %></p>
-            <p>1 st Jan 2020</p>
-        </div>
-        <div class="Group__price">
-        <p><b>$45.oo</b></p>
-        </div>
-    </div>
+
     <% end %>
     </div>
     <div class="scan">

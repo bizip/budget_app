@@ -29,7 +29,12 @@ body {
     background-color: $font-primary;
     font-family: $font-primary;
     color: $color-secondary;
-    font-weight: 300;
-    margin-left: 30%;
-    margin-right: 30%;
+}
+
+@media screen and (min-width: 650px) {
+    body {
+        font-weight: 300;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
 }

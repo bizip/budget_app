@@ -1,23 +1,33 @@
 # frozen_string_literal: true
 
 class EntitiesController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @entity = Entity.all
+    @group_by_user = current_user.groups.find(params[:group_id])
+    @entities = @group_by_user
   end
 
   def new
-    @entity = Entity.new
+    @group = current_user.groups.find(params[:group_id])
+    @entity = @group.entities.new
   end
 
   def create
-    @entity = Entity.new(entity_params)
-    @entity.author = current_user
+    @group = current_user.groups.find(params[:group_id])
+    @entity = current_user.entities.create(entity_params)
+    puts @entity
     if @entity.save
-      redirect_to entities_path, notice: "#{@entity.name} successfully created." if @entity.save
-      flash[:notice] = 'Transaction created successfully!'
+      @group_entity = @entity.entity_group.create(group_id: @group.id, entity_id: @entity.id)
+      if @group_entity.save
+        flash[:notice] = 'Transaction created successfully'
+        redirect_to group_entities_path(@group)
+      else
+        flash.now[:alert] = 'Category creation failed'
+        render action: 'new'
+      end
     else
-      render :new
-      flash.now[:alert] = 'Something unexpected happened, Transaction could not be created!'
+      flash.now[:alert] = 'Transaction creation failed, try again'
+      render action: 'new'
     end
   end
 
