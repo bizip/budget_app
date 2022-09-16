@@ -6,6 +6,6 @@
         <%= link_to 'Categories' %>
         <%= link_to 'New category', new_group_path %>
         <%= link_to 'Login', new_user_session_path  %>
-        <%= link_to 'Logout', destroy_user_session_path  %>
+        <%= link_to 'Logout',  destroy_user_session_path, data: { turbo_method: :delete }  %>
     </div>
 </div>
