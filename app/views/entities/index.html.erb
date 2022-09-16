@@ -1,4 +1,6 @@
  <%= render partial: "shared/entity_nav" %>
+  <br />
+ <section class="entity_section">
  <div class="group_container">
             <div class="Group__image">
             <img src= <%= @group_by_user.icon %>  alt="Logo" />
@@ -21,8 +23,8 @@ prosciutto ground round ball tip picanha.
   <% @entities.each do |entity| %>
  <div class="sub_nav2">
         <div>
-            <p class="fw-semibold"><%= entity.name %></p>
-            <p class="fw-light"><%= l entity.created_at, format: :long %></p>
+            <p><b><%= entity.name %></b></p>
+            <p><%= l entity.created_at, format: :long %></p>
         </div>
           <p class="Group_price">
             $<%= entity.amount %>
@@ -30,11 +32,12 @@ prosciutto ground round ball tip picanha.
 </div>
   <% end %>
 <% else %>
-  <p>You have no Transactions and new to continue</p>
+  <p>You have no Transactions yet</p>
 <% end %>
 
  <div class="sub_nav">
         <p>Total payment</p>
         <p><b><%=  @entities.map(&:amount).sum %></b></p>
 </div>
-<%= link_to 'Add Transaction', new_group_entity_path, class: "btn btn-primary fixed-bottom" %>
+<%= link_to 'Add Transaction', new_group_entity_path, class: "add_transaction" %>
+</section>

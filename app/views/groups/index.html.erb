@@ -4,7 +4,8 @@
 <main>
     <div class="sub_nav">
         <p>Gifted</p>
-        <p><b>$45.00</b></p>
+        <p><b><%= link_to 'New category', new_group_path, class: "new_category" %>
+</b></p>
     </div>
 
     <div class="main__section">
@@ -18,10 +19,10 @@
             </div>
             <div class="Group__text">
              <%= link_to grp.name,  group_entities_path(grp.id), class: "nav-link" %>
-                <p>1 st Jan 2020</p>
+                <p><%= l grp.created_at, format: :short %></p>
             </div>
             <div class="Group__price">
-            <p><b>$45.00</b></p>
+            <p><b>$ <%= grp.entities.sum(&:amount) %></b></p>
             </div>
         </div>
 

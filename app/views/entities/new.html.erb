@@ -1,4 +1,4 @@
-
+ <%= render partial: "shared/entity_nav" %>
 <div class="d-flex flex-column align-items-center">
   <h1>Add new entity</h1>
   <%= form_with model: @entity, url:  group_entities_path,class: "d-flex flex-column", method: :post do |form| %>

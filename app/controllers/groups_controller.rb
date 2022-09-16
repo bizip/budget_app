@@ -33,7 +33,6 @@ class GroupsController < ApplicationController # rubocop:todo Style/Documentatio
   private
 
   def category_params
-    author_id = current_user.id
     params.require(:group).permit(:name, :icon)
   end
 end

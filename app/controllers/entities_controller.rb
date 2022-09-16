@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class EntitiesController < ApplicationController
+class EntitiesController < ApplicationController # rubocop:todo Style/Documentation
   before_action :authenticate_user!
   def index
     @group_by_user = current_user.groups.find(params[:group_id])
@@ -12,10 +12,9 @@ class EntitiesController < ApplicationController
     @entity = @group.entities.new
   end
 
-  def create
+  def create # rubocop:todo Metrics/AbcSize, Metrics/MethodLength
     @group = current_user.groups.find(params[:group_id])
     @entity = current_user.entities.create(entity_params)
-    puts @entity
     if @entity.save
       @group_entity = @entity.entity_group.create(group_id: @group.id, entity_id: @entity.id)
       if @group_entity.save

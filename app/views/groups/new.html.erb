@@ -1,4 +1,5 @@
-
+ <%= render partial: "shared/entity_nav" %>
+ <br />
 <div class="d-flex flex-column align-items-center">
   <h1>Add new category</h1>
   <%= form_with model: @group, url:  groups_path, class: "d-flex flex-column", method: :post do |form| %>
