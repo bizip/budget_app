@@ -1,4 +1,6 @@
 AllCops:
+   Exclude:
+    - 'vendor/**/*'
   NewCops: enable
   Exclude:
     - "db/**/*"
