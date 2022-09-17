@@ -23,7 +23,7 @@ To get a local copy up and running follow these simple example steps.
 You need to have a git installed
 You need to have a basic knowledge about ruby on rails
 
-### Setup
+### Setup the progect
 
 #### clone this project (using git clone https://github.com/bizip/budget_app.git) to your local computer and use telminal to navigate into the parent directory of this project.
 
