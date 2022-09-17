@@ -10,7 +10,7 @@ class EntitiesController < ApplicationController
     @entity = @group.entities.new
   end
 
-  def create # rubocop:todo Metrics/AbcSize, Metrics/MethodLength
+  def create
     @group = current_user.groups.find(params[:group_id])
     @entity = current_user.entities.create(entity_params)
     if @entity.save
