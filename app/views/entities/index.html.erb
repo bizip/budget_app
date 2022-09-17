@@ -1,1 +1,43 @@
-List of entities
+ <%= render partial: "shared/entity_nav" %>
+  <br />
+ <section class="entity_section">
+ <div class="group_container">
+            <div class="Group__image">
+            <img src= <%= @group_by_user.icon %>  alt="Logo" />
+            </div>
+            <div class="Group__text">
+             <%= link_to @group_by_user.name, class: "nav-link" %>
+            </div>
+            <div class="Group__price">
+           
+            </div>
+</div>
+<div class="group__text">
+<p>short loin jerky chuck pork belly pork. Turducken kielbasa chicken 
+andouille t-bone picanha. Flank ham hock 
+prosciutto ground round ball tip picanha.
+</p>
+<div>
+
+<% if @entities.count > 0 %>
+  <% @entities.each do |entity| %>
+ <div class="sub_nav2">
+        <div>
+            <p><b><%= entity.name %></b></p>
+            <p><%= l entity.created_at, format: :long %></p>
+        </div>
+          <p class="Group_price">
+            $<%= entity.amount %>
+        </p>
+</div>
+  <% end %>
+<% else %>
+  <p>You have no Transactions yet</p>
+<% end %>
+
+ <div class="sub_nav">
+        <p>Total payment</p>
+        <p><b><%=  @entities.map(&:amount).sum %></b></p>
+</div>
+<%= link_to 'Add Transaction', new_group_entity_path, class: "add_transaction" %>
+</section>

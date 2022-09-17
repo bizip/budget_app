@@ -1,27 +1,34 @@
-# frozen_string_literal: true
-
-class GroupsController < ApplicationController # rubocop:todo Style/Documentation
+class GroupsController < ApplicationController
+  before_action :authenticate_user!, except: :index
   def index
-    @group = Group.all
-  end
-
-  def new
-    @group = Group.new
-  end
-
-  def create
-    @group = Group.new(category_params)
-    @group.author = current_user
-    if @group.save
-      redirect_to groups_path, notice: "#{@group.name} successfully created." if @group.save
-      flash[:notice] = 'Inventory created successfully!'
+    if user_signed_in?
+      @group = current_user.groups
     else
-      flash.now[:alert] = 'Something unexpected happened, inventory could not be created.'
-      render :new
+      render 'users/slash'
     end
   end
 
-  # private
+  def show
+    @group = Group.find(params[:id])
+  end
+
+  def new
+    @group = current_user.groups.new
+  end
+
+  def create
+    @user = current_user
+    @group = @user.groups.create(category_params)
+    if @group.save
+      flash[:notice] = 'Category created successfully'
+      redirect_to groups_path
+    else
+      flash.now[:alert] = 'Failed try again'
+      render action: 'new'
+    end
+  end
+
+  private
 
   def category_params
     params.require(:group).permit(:name, :icon)

@@ -1,2 +1,36 @@
+ 
+ <%= render partial: "shared/popup" %>
+ <%= render partial: "shared/navbar" %>
+<main>
+    <div class="sub_nav">
+        <p>Gifted</p>
+        <p><b><%= link_to 'New category', new_group_path, class: "new_category" %>
+</b></p>
+    </div>
 
-<p><%= @group.inspect %></p>
+    <div class="main__section">
+
+    <% @group.each do |grp| %>
+
+   
+        <div class="group_container">
+            <div class="Group__image">
+            <img src=<%= grp.icon %> alt="Logo" />
+            </div>
+            <div class="Group__text">
+             <%= link_to grp.name,  group_entities_path(grp.id), class: "nav-link" %>
+                <p><%= l grp.created_at, format: :short %></p>
+            </div>
+            <div class="Group__price">
+            <p><b>$ <%= grp.entities.sum(&:amount) %></b></p>
+            </div>
+        </div>
+
+    <% end %>
+    </div>
+    <div class="scan">
+    <button class="scan_btn">Scan</button>
+    </div>
+</main>
+
+

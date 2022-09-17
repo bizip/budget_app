@@ -1,4 +1,6 @@
 AllCops:
+  Exclude:
+    - 'vendor/**/*'
   NewCops: enable
   Exclude:
     - "db/**/*"
@@ -58,3 +60,5 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
+Layout/EndOfLine:
+   Enabled: False
