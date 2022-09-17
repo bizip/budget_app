@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class GroupsController < ApplicationController # rubocop:todo Style/Documentation
   before_action :authenticate_user!, except: :index
   def index

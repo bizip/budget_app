@@ -7,59 +7,56 @@ $color-secondary: #434b54;
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
-
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
-
 .header {
-    background-color: $color-primary-dark;
-    color: #fff;
+  background-color: $color-primary-dark;
+  color: #fff;
 }
 
 .header .nav_container {
-    font-size: 2.5rem;
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem .5rem 2.5rem .5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 0.5rem 2.5rem 0.5rem;
 }
 
 .status {
-    padding: .5rem .5rem;
-    font-size: 1.8rem;
-    font-weight: bold;
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.status__text:not(:last-child) {
-    margin-left: 3rem;
-}
-
-.leaved {
-    color: #ced3da;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .status__text {
-    padding-bottom: 1rem;
-    font-weight: normal;
+  padding-bottom: 1rem;
+  font-weight: normal;
 }
 
+.status__text:not(:last-child) {
+  margin-left: 3rem;
+}
+
+.leaved {
+  color: #ced3da;
+}
 
 .status__text span {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .login_links {
-    font-size: 2rem !important;
-    padding: .3rem;
+  font-size: 2rem !important;
+  padding: 0.3rem;
 }
 
 .login_links a {
-    text-decoration: none;
-    color: #3778c2;
+  text-decoration: none;
+  color: #3778c2;
 }

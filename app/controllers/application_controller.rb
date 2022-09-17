@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ApplicationController < ActionController::Base # rubocop:todo Style/Documentation
   before_action :conifgure_parameters, if: :devise_controller?
 

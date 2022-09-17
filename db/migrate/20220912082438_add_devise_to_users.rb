@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class AddDeviseToUsers < ActiveRecord::Migration[7.0] # rubocop:todo Style/Documentation
   def self.up # rubocop:todo Metrics/MethodLength
     change_table :users do |t|
