@@ -4,5 +4,5 @@ class Group < ApplicationRecord
   has_many :entities, through: :entity_group
 
   validates :name, presence: true, length: { in: 4..100 }
-  validates :icon, presence: true, length: { in: 4..100 }
+  validates :icon, presence: true, length: { in: 4..10000 }
 end

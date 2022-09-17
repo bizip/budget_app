@@ -7,6 +7,13 @@ This is a mobile first approach web app that lets you use to pay for things in s
 
 -Ruby on Rails
 
+## link to live app
+
+[Budget trucker](https://budgetap.herokuapp.com/)
+
+## link to video demonstrations
+
+[Budget trucke demo](https://www.loom.com/share/80e33d053c1b450bbc12381079357b2b)
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
