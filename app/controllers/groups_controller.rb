@@ -1,4 +1,4 @@
-class GroupsController < ApplicationController # rubocop:todo Style/Documentation
+class GroupsController < ApplicationController
   before_action :authenticate_user!, except: :index
   def index
     if user_signed_in?

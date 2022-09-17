@@ -1,4 +1,4 @@
-class AddDeviseToUsers < ActiveRecord::Migration[7.0] # rubocop:todo Style/Documentation
+class AddDeviseToUsers < ActiveRecord::Migration[7.0]
   def self.up # rubocop:todo Metrics/MethodLength
     change_table :users do |t|
       ## Database authenticatable

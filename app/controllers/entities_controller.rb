@@ -1,4 +1,4 @@
-class EntitiesController < ApplicationController # rubocop:todo Style/Documentation
+class EntitiesController < ApplicationController
   before_action :authenticate_user!
   def index
     @group_by_user = current_user.groups.find(params[:group_id])
