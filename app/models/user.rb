@@ -7,4 +7,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
   has_many :entities, foreign_key: :author_id
   has_many :groups, foreign_key: :author_id
+
+  validates :password, presence: true
+  validates :email, presence: true
+  validates :name, presence: true, length: { maximum: 50 }
 end
